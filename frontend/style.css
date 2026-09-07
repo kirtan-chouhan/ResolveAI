@@ -1,0 +1,809 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family:
+        Inter,
+        Arial,
+        sans-serif;
+
+    background: #f6f7fb;
+
+    color: #17181c;
+
+    min-height: 100vh;
+}
+
+
+.container {
+    width: min(920px, 92%);
+
+    margin: auto;
+
+    padding-bottom: 40px;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+.header {
+    height: 76px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid #e7e8ee;
+}
+
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+}
+
+
+.logo-icon {
+    width: 39px;
+
+    height: 39px;
+
+    border-radius: 11px;
+
+    background: #17181c;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 20px;
+}
+
+
+.logo h1 {
+    font-size: 19px;
+
+    line-height: 1.1;
+}
+
+
+.logo p {
+    font-size: 10px;
+
+    color: #858792;
+
+    margin-top: 3px;
+}
+
+
+.ai-status {
+    font-size: 12px;
+
+    color: #70727c;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.status-dot {
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+}
+
+
+/* =========================
+   Hero
+========================= */
+
+.hero {
+    text-align: center;
+
+    padding: 70px 0 48px;
+}
+
+
+.badge {
+    display: inline-block;
+
+    background: #eeedff;
+
+    color: #6258d8;
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    margin-bottom: 18px;
+}
+
+
+.hero h2 {
+    font-size: clamp(38px, 6vw, 56px);
+
+    line-height: 1.06;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 18px;
+}
+
+
+.hero h2 span {
+    color: #777a85;
+}
+
+
+.hero p {
+    max-width: 620px;
+
+    margin: auto;
+
+    color: #777984;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   Card
+========================= */
+
+.card {
+    background: white;
+
+    border: 1px solid #e6e7ed;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    margin-bottom: 17px;
+
+    box-shadow:
+        0 8px 30px rgba(25, 27, 38, 0.04);
+}
+
+
+.card-header {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+
+.card-header h3 {
+    font-size: 17px;
+
+    margin-bottom: 5px;
+}
+
+
+.card-header p {
+    color: #888a94;
+
+    font-size: 12px;
+}
+
+
+.pdf-icon {
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 10px;
+
+    background: #fff0f0;
+
+    color: #df4848;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 10px;
+
+    font-weight: 800;
+}
+
+
+/* =========================
+   Upload
+========================= */
+
+.upload-box {
+    border: 1.5px dashed #d7d9e2;
+
+    border-radius: 15px;
+
+    background: #fafbfe;
+
+    padding: 35px 20px;
+
+    text-align: center;
+}
+
+
+.upload-icon {
+    width: 48px;
+
+    height: 48px;
+
+    margin: 0 auto 13px;
+
+    border-radius: 14px;
+
+    background: #eeeeff;
+
+    color: #665ce3;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 24px;
+}
+
+
+.upload-box h4 {
+    font-size: 15px;
+
+    margin-bottom: 5px;
+}
+
+
+.upload-box > p {
+    font-size: 12px;
+
+    color: #898b95;
+
+    margin-bottom: 18px;
+}
+
+
+.choose-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 42px;
+
+    padding: 0 20px;
+
+    border-radius: 10px;
+
+    background: #17181c;
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.choose-button:hover {
+    background: #303137;
+
+    transform: translateY(-1px);
+}
+
+
+.file-name {
+    margin-top: 14px;
+
+    font-size: 12px;
+
+    color: #555862;
+
+    font-weight: 500;
+}
+
+
+.upload-status {
+    margin-top: 12px;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    color: #626570;
+}
+
+
+/* =========================
+   Document Bar
+========================= */
+
+.document-bar {
+    background: #17181c;
+
+    color: white;
+
+    border-radius: 15px;
+
+    padding: 14px 17px;
+
+    margin-bottom: 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.document-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+}
+
+
+.document-small-icon {
+    width: 37px;
+
+    height: 37px;
+
+    border-radius: 9px;
+
+    background: #303137;
+
+    color: #ff8585;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 9px;
+
+    font-weight: 800;
+}
+
+
+.document-left span {
+    display: block;
+
+    color: #92949e;
+
+    font-size: 8px;
+
+    letter-spacing: 0.8px;
+
+    margin-bottom: 3px;
+}
+
+
+.document-left strong {
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.document-ready {
+    color: #aeb0b8;
+
+    font-size: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+.document-ready span {
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #4ade80;
+}
+
+
+/* =========================
+   Question
+========================= */
+
+.sparkle {
+    width: 39px;
+
+    height: 39px;
+
+    border-radius: 10px;
+
+    background: #efeeff;
+
+    color: #665ce3;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 19px;
+}
+
+
+.question-box {
+    border: 1px solid #e2e3e9;
+
+    border-radius: 13px;
+
+    overflow: hidden;
+
+    background: #fcfcfd;
+}
+
+
+textarea {
+    width: 100%;
+
+    min-height: 115px;
+
+    border: none;
+
+    outline: none;
+
+    resize: vertical;
+
+    padding: 17px;
+
+    background: transparent;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    color: #202127;
+}
+
+
+textarea::placeholder {
+    color: #a0a2ab;
+}
+
+
+textarea:disabled {
+    cursor: not-allowed;
+
+    opacity: 0.55;
+}
+
+
+.question-footer {
+    border-top: 1px solid #e7e8ed;
+
+    padding: 10px 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.question-footer > span {
+    color: #999ba4;
+
+    font-size: 10px;
+}
+
+
+#askButton {
+    border: none;
+
+    background: #17181c;
+
+    color: white;
+
+    padding: 9px 14px;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+#askButton:hover {
+    background: #303137;
+}
+
+
+#askButton:disabled {
+    opacity: 0.55;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   Answer
+========================= */
+
+.answer-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+
+.answer-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.answer-icon {
+    width: 37px;
+
+    height: 37px;
+
+    border-radius: 10px;
+
+    background: #17181c;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.answer-title h3 {
+    font-size: 17px;
+
+    margin-bottom: 2px;
+}
+
+
+.answer-title p {
+    font-size: 10px;
+
+    color: #92949d;
+}
+
+
+.gemini-badge {
+    background: #efeeff;
+
+    color: #665ce3;
+
+    padding: 6px 9px;
+
+    border-radius: 7px;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+
+.answer {
+    min-height: 145px;
+
+    background: #f8f9fc;
+
+    border: 1px solid #eceef3;
+
+    border-radius: 13px;
+
+    padding: 19px;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+.empty-state {
+    min-height: 105px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    text-align: center;
+}
+
+
+.empty-icon {
+    font-size: 22px;
+
+    color: #7770df;
+
+    margin-bottom: 7px;
+}
+
+
+.empty-state h4 {
+    font-size: 13px;
+
+    margin-bottom: 4px;
+}
+
+
+.empty-state p {
+    color: #9799a2;
+
+    font-size: 11px;
+}
+
+
+.generated-answer p {
+    margin-bottom: 11px;
+}
+
+
+.generated-answer h4 {
+    font-size: 14px;
+
+    margin: 17px 0 9px;
+}
+
+
+.generated-answer ul {
+    margin: 8px 0 14px 20px;
+}
+
+
+.generated-answer li {
+    margin-bottom: 7px;
+
+    padding-left: 3px;
+}
+
+
+.generated-answer strong {
+    font-weight: 700;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    padding: 25px 3px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #999ba4;
+
+    font-size: 10px;
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 92%;
+    }
+
+
+    .hero {
+        padding: 50px 0 35px;
+    }
+
+
+    .hero h2 {
+        font-size: 38px;
+
+        letter-spacing: -1.5px;
+    }
+
+
+    .document-bar {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+
+    .question-footer {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 10px;
+    }
+
+
+    #askButton {
+        width: 100%;
+    }
+
+
+    footer {
+        flex-direction: column;
+
+        gap: 5px;
+
+        text-align: center;
+    }
+
+}

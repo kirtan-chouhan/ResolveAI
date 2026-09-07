@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>ResolveAI</title>
+
+    <link
+        rel="stylesheet"
+        href="/frontend/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+
+        <!-- =====================================
+             Header
+        ====================================== -->
+
+        <header class="header">
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    ✦
+                </div>
+
+                <div>
+
+                    <h1>
+                        ResolveAI
+                    </h1>
+
+                    <p>
+                        Document Intelligence Assistant
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="ai-status">
+
+                <span class="status-dot"></span>
+
+                AI Ready
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =====================================
+             Hero
+        ====================================== -->
+
+        <section class="hero">
+
+            <div class="badge">
+                AI-Powered Document Assistant
+            </div>
+
+
+            <h2>
+
+                Ask questions.<br>
+
+                <span>
+                    Get answers from your documents.
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Upload a PDF and ask questions about its content.
+                ResolveAI retrieves relevant information and generates
+                grounded answers.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- =====================================
+             Upload
+        ====================================== -->
+
+        <section class="card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h3>
+                        Upload Document
+                    </h3>
+
+                    <p>
+                        Select a PDF to get started
+                    </p>
+
+                </div>
+
+
+                <div class="pdf-icon">
+                    PDF
+                </div>
+
+            </div>
+
+
+
+            <div class="upload-box">
+
+                <div class="upload-icon">
+                    ↑
+                </div>
+
+
+                <h4>
+                    Select your PDF
+                </h4>
+
+
+                <p>
+                    Your document will be uploaded automatically
+                </p>
+
+
+                <label
+                    for="fileInput"
+                    class="choose-button"
+                >
+                    Choose PDF
+                </label>
+
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    accept=".pdf,application/pdf"
+                    hidden
+                >
+
+
+                <div
+                    id="fileName"
+                    class="file-name"
+                >
+                    No file selected
+                </div>
+
+            </div>
+
+
+            <div
+                id="uploadStatus"
+                class="upload-status"
+            ></div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             Active Document
+        ====================================== -->
+
+        <section class="document-bar">
+
+            <div class="document-left">
+
+                <div class="document-small-icon">
+                    PDF
+                </div>
+
+
+                <div>
+
+                    <span>
+                        ACTIVE DOCUMENT
+                    </span>
+
+
+                    <strong id="selectedDocument">
+                        No document selected
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="document-ready">
+
+                <span></span>
+
+                Ready
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             Question
+        ====================================== -->
+
+        <section class="card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h3>
+                        Ask your document
+                    </h3>
+
+
+                    <p>
+                        Press Enter to send • Shift + Enter for a new line
+                    </p>
+
+                </div>
+
+
+                <div class="sparkle">
+                    ✦
+                </div>
+
+            </div>
+
+
+
+            <div class="question-box">
+
+                <textarea
+                    id="questionInput"
+                    placeholder="Ask anything about your document..."
+                    disabled
+                ></textarea>
+
+
+                <div class="question-footer">
+
+                    <span>
+                        Grounded in your uploaded document
+                    </span>
+
+
+                    <button
+                        type="button"
+                        id="askButton"
+                        disabled
+                    >
+
+                        Send
+
+                        <span>
+                            ↵
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             Answer
+        ====================================== -->
+
+        <section class="card">
+
+            <div class="answer-header">
+
+                <div class="answer-title">
+
+                    <div class="answer-icon">
+                        ✦
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Answer
+                        </h3>
+
+
+                        <p>
+                            Generated from your document
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="gemini-badge">
+                    Gemini
+                </div>
+
+            </div>
+
+
+
+            <div
+                id="answer"
+                class="answer"
+            >
+
+                <div class="empty-state">
+
+                    <div class="empty-icon">
+                        ✦
+                    </div>
+
+
+                    <h4>
+                        Your answer will appear here
+                    </h4>
+
+
+                    <p>
+                        Select a PDF and ask a question to begin.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             Footer
+        ====================================== -->
+
+        <footer>
+
+            <span>
+                ResolveAI
+            </span>
+
+
+            <span>
+                RAG-powered document intelligence
+            </span>
+
+        </footer>
+
+    </div>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="/frontend/script.js?v=6"></script>
+
+</body>
+
+</html>
